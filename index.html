@@ -65,7 +65,7 @@ Address: No.95 ZhongGuanCun East St, HaiDian District, Beijing, P.R.China, 10019
 <ul>
 <li>
   <p>
-      Updating soon...
+      Our paper "Semi-supervised Multimodal Deep Learning for RGB-D Object Recognition" has been accepeted by IJCAI2016.
   </p>
 </li>
 </ul>
@@ -245,51 +245,45 @@ state-of-the-art.
 <br /><br />
 
 <li>
-<a href="http://159.226.251.229/videoplayer/Zhang_MeshStereo_A_Global_ICCV_2015_paper.pdf?ich_u_r_i=8b0c9a1eabbcf68f5daea0e5150e46b5&ich_s_t_a_r_t=0&ich_e_n_d=0&ich_k_e_y=1645048907751663592491&ich_t_y_p_e=1&ich_d_i_s_k_i_d=4&ich_u_n_i_t=1"> MeshStereo: A Global Stereo Model with Mesh Alignment Regularization for View Interpolation, </a> <br />
-<b>Chi Zhang</b>,Zhiwei Li, Yanhua Cheng, Rui Cai, Yanghong Chao, Yong Rui<br />
-<i>International Conference on Computer Vision</i> (<b>ICCV</b>), 2015. <br />
+<a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhang_MeshStereo_A_Global_ICCV_2015_paper.html"> MeshStereo: A Global Stereo Model with Mesh Alignment Regularization for View Interpolation, </a> <br />
+Chi Zhang, Zhiwei Li, <b>Yanhua Cheng</b>, Rui Cai, Yanghong Chao, Yong Rui<br />
+<i>International Conference on Computer Vision</i> (<b>ICCV</b>), 2015 (Oral). <br />
 </li>
-[<a href="http://159.226.251.229/videoplayer/Cheng_Query_Adaptive_Similarity_ICCV_2015_paper.pdf?ich_u_r_i=0219906766f3baf7140926015524f360&ich_s_t_a_r_t=0&ich_e_n_d=0&ich_k_e_y=1645048907751663462468&ich_t_y_p_e=1&ich_d_i_s_k_i_d=2&ich_u_n_i_t=1">PDF</a>]
+[<a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhang_MeshStereo_A_Global_ICCV_2015_paper.html">PDF</a>]
 [<a href="javascript:toggleBibtex('ICCV15_abstract')" target="_self">Abstract</a>]
 [<a href="javascript:toggleBibtex('ICCV15')" target="_self">Bibtex</a>]
-[<a href="http://159.226.251.229/videoplayer/Cheng_Query_Adaptive_Similarity_ICCV_2015_paper.pdf?ich_u_r_i=0219906766f3baf7140926015524f360&ich_s_t_a_r_t=0&ich_e_n_d=0&ich_k_e_y=1645048907751663462468&ich_t_y_p_e=1&ich_d_i_s_k_i_d=2&ich_u_n_i_t=1">DOI</a>]
+[<a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/html/Zhang_MeshStereo_A_Global_ICCV_2015_paper.html">DOI</a>]
 <div class="blockcontent" id="ICCV15_abstract" style="display:none"> 
   <p style="font-size:16px">
-          This paper studies the problem of improving the top-1 accuracy
-of RGB-D object recognition. Despite of the impressive
-top-5 accuracies achieved by existing methods, their
-top-1 accuracies are not very satisfactory. The reasons are
-in two-fold: (1) existing similarity measures are sensitive to
-object pose and scale changes, as well as intra-class variations;
-and (2) effectively fusing RGB and depth cues is still
-an open problem. To address these problems, this paper first
-proposes a new similarity measure based on dense matching,
-through which objects in comparison are warped and
-aligned, to better tolerate variations. Towards RGB and
-depth fusion, we argue that a constant and golden weight
-doesn’t exist. The two modalities have varying contributions
-when comparing objects from different categories. To
-capture such a dynamic characteristic, a group of matchers
-equipped with various fusion weights is constructed, to explore
-the responses of dense matching under different fusion
-configurations. All the response scores are finally merged
-following a learning-to-combination way, which provides
-quite good generalization ability in practice. The proposed
-approach win the best results on several public benchmarks,
-e.g., achieves 92.7% top-1 test accuracy on the Washington
-RGB-D object dataset, with a 5.1% improvement over the
-state-of-the-art.
+          We present a novel global stereo model designed for view
+interpolation. Unlike existing stereo models which only output
+a disparity map, our model is able to output a 3D triangular
+mesh, which can be directly used for view interpolation.
+To realize this feature, we partition the input stereo
+images into 2D triangles with shared vertices. Lifting the
+2D triangulation to 3D naturally generates a corresponding
+mesh. A technical difficulty is to properly split vertices
+to multiple copies when they appear at depth discontinuous
+boundaries. To deal with this problem, we formulate our objective
+as a two-layer MRF, with the upper layer modeling
+the splitting properties of the vertices and the lower layer
+optimizing a region-based stereo matching. Experiments on
+the Middlebury and the Herodion datasets demonstrate that
+our model is able to synthesize visually coherent new view
+angles with high PSNR, as well as outputting high quality
+disparity maps which rank at the first place on the new challenging
+high resolution Middlebury 3.0 benchmark.
       </p>
 </div>
 
 <div class="blockcontent" id="ICCV15" style="display:none"> 
 <pre>
 @inproceedings{YanhuaCheng/iccv2015,
- title = {Query Adaptive Similarity Measure for RGB-D Object Recognition},
- author={Yanhua Cheng, Rui Cai, Chi Zhang, Zhiwei Li, Xin Zhao, Kaiqi Huang, Yong Rui},
+ title = {MeshStereo: A Global Stereo Model with Mesh Alignment Regularization for View Interpolation},
+ author={Chi Zhang, Zhiwei Li, Yanhua Cheng, Rui Cai, Yanghong Chao, Yong Rui},
  booktitle = {ICCV},
  year = {2015},
- pages = {145-153}
+ pages = {2057-2065}
  address = {Chile}
 }
 </pre>
@@ -297,29 +291,51 @@ state-of-the-art.
 <br /><br />
 
 <li>
-<a href="http://dl.acm.org/citation.cfm?id=2632875"> License Plate Localization With Efficient Markov Chain Monte Carlo, </a> <br />
-Lijun Cao, Xu Zhang, <b>Weihua Chen</b>, Kaiqi Huang <br />
-<i>ACM International Conference on Internet Multimedia  Computing and Service</i> (<b>ICIMCS</b>), 2014. <br />
+<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7335478"> Convolutional Fisher Kernels for RGB-D Object Recognition, </a> <br />
+<b>Yanhua Cheng</b>, Rui Cai, Xin Zhao, Kaiqi Huang <br />
+<i>International Conference on 3D Vision </i> (<b>3DV</b>), 2015. <br />
 </li>
-[<a href="http://delivery.acm.org/10.1145/2640000/2632875/p295-cao.pdf?ip=159.226.179.184&id=2632875&acc=ACTIVE%20SERVICE&key=33E289E220520BFB.949A0B1AADF887FF.4D4702B0C3E38B35.4D4702B0C3E38B35&CFID=478662293&CFTOKEN=48147274&__acm__=1423729709_b0f999fdc4df3e522a521c2999917fb0">PDF</a>]
-[<a href="javascript:toggleBibtex('ICIMCS14b_abstract')" target="_self">Abstract</a>]
-[<a href="javascript:toggleBibtex('ICIMCS14b')" target="_self">Bibtex</a>]
-[<a href="http://dl.acm.org/citation.cfm?id=2632875">DOI</a>]
-<div class="blockcontent" id="ICIMCS14b_abstract" style="display:none"> 
+[<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7335478">PDF</a>]
+[<a href="javascript:toggleBibtex('3DV2015_abstract')" target="_self">Abstract</a>]
+[<a href="javascript:toggleBibtex('3DV2015')" target="_self">Bibtex</a>]
+[<a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=7335478">DOI</a>]
+<div class="blockcontent" id="3DV2015_abstract" style="display:none"> 
   <p style="font-size:16px">
-          This paper presents a novel efficient Markov Chain Monte Carlo (MCMC) method for License Plate (LP) localization. The proposed method formulates the LP image feature and prior knowledge into a unified Bayesian framework. Then the localization problem is derived as a maximizing-a-posterior (MAP) problem, which integrates color, edge and character feature of LP. We propose an efficient MCMC method, taking integrated local geometrical likelihood as proposal probability to make the inference feasible. The experimental results on real dataset are very promising in terms of detection rate and localization accuracy.
+          This paper studies the problem of improving object
+recognition using the novel RGB-D data. To address the
+problem, a new convolutional Fisher Kernels (CFK) method
+is proposed to represent RGB-D objects powerfully yet efficiently.
+The core idea of our approach is to integrate the
+both advantages of the convolutional neural networks (CNN)
+and Fisher Kernel encoding (FK): CNN model is flexible
+to adapt to new data sources, but requires for large amounts
+of training data with significant computational resources
+for good generalization; In comparison, FK encoding is
+able to represent objects powerfully and efficiently with small
+training data, however, its success highly depends on
+the well-designed SIFT features in literature, which may not
+be suitable for the new depth data. CFK can be interpreted
+as a two-layer feature learning structure to bridge the
+two models. The first layer employs a single-layer CNN to
+learn low-level translationally invariant features for both
+RGB and depth data efficiently. The second layer aggregates
+the convolutional responses by FK encoding. Here 2D
+and 3D spatial pyramids are applied to further improve the
+Fisher vector representation of each modality. Experiments
+on RGB-D object recognition benchmarks demonstrate that
+our approach can achieve the state-of-the-art results.
       </p>
 </div>
 
-<div class="blockcontent" id="ICIMCS14b" style="display:none"> 
+<div class="blockcontent" id="3DV2015" style="display:none"> 
 <pre>
-@inproceedings{Chen/icimcs2014,
- title = {License Plate Localization With Efficient Markov Chain Monte Carlo},
- author={Cao, Lijun and Zhang, Xu and Chen, Weihua and Huang, Kaiqi},
- booktitle = {ACM International Conference on Internet Multimedia  Computing and Service (ICIMCS)},
- year = {2014},
- pages = {295}
- address = {Xiamen, China}
+@inproceedings{YanhuaCheng/3DV2015,
+ title = {Convolutional Fisher Kernels for RGB-D Object Recognition},
+ author={Yanhua Cheng, Rui Cai, Xin Zhao, Kaiqi Huang},
+ booktitle = {International Conference on 3D Vision (3DV) 2015},
+ year = {2015},
+ pages = {135-143}
+ address = {France}
 }
 </pre>
 </div>
@@ -333,7 +349,7 @@ Lijun Cao, Xu Zhang, <b>Weihua Chen</b>, Kaiqi Huang <br />
 </li>
 </ul>
 
-<h2>Datasets</h2>
+<!-- <h2>Datasets</h2>
 <ul>
 <li>
   <p>
@@ -357,7 +373,7 @@ Lijun Cao, Xu Zhang, <b>Weihua Chen</b>, Kaiqi Huang <br />
 </br>Last updated at 2015-02-12 by Weihua Chen. Page created by reference to <a href="http://www.ee.cuhk.edu.hk/~rzhao/">Rui Zhao's homepage</a>.
 </div>
 </div>
-</div>
+</div> -->
 
 
 </body>
