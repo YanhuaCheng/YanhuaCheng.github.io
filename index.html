@@ -218,36 +218,6 @@ Address: No.95 ZhongGuanCun East St, HaiDian District, Beijing, P.R.China, 10019
 </div>
 </div>
 
-session_start();
-$filepath = 'count.txt';
-if ($_SESSION['temp'] == '')
-{
-    if (!file_exists($filepath))
-    {
-        $fp = fopen($filepath,'w');
-        fwrite($fp,0);
-        fclose($fp);
-        counter($filepath);
-    }
-    else
-    {
-        counter($filepath);
-    }
-    $_SESSION['temp'] = 1
-}
-echo 'Welcome，you are the <font color="#FF0000">'.file_get_contents($filepath).'</font> visitors';
-counter();
-function counter($f_value)
-{ 
- $fp = fopen($f_value,'r') or die('Error to open the file');
- $countNum = fgets($fp,1024);
- fclose($fp);
- $countNum++;
- $fpw = fopen($f_value,'w');
- fwrite($fpw,$countNum);
- fclose($fpw);
-}
-session_destroy();
 </div>
 </body>
 </html>
